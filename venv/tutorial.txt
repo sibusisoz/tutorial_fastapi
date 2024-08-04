@@ -1,0 +1,65 @@
+py -3 -m venv venv
+-view -coom-interpreter : .\venv\Scripts\python.exe
+venv\Scripts\activate.bat
+pip install fastapi[all]
+
+fastapi dev main.py --reload
+create venv\App\__init__.py, and copy main.py  into this directory
+
+fastapi dev app\main.py --reload
+
+install postgres
+
+#connector to postgres from python
+pip install "psycopg[c]"
+
+pip install SQLAlchemy
+
+
+***ERROR: Could not install packages due to an OSError:
+***Could not find a suitable TLS CA certificate bundle, invalid path: 
+***C:\Program Files\PostgreSQL\16\ssl\certs\ca-bundle.crt
+python -c “import certifi; print(certifi.where())”
+--add to envir vars - curl certifi
+
+
+#We need to install PyJWT to generate and verify the JWT tokens in Python:
+pip install pyjwt
+pip install pyjwt[crypto]
+pip install pytz
+
+
+
+#PassLib is a great Python package to handle password hashes
+pip install "passlib[bcrypt]"
+
+pip uninstall  bcrypt cffi pycparser
+pip install  --upgrade cffi
+pip install  --upgrade bcrypt
+
+#secret key , get opnssl binary exe from https://wiki.overbyte.eu/wiki/index.php/ICS_Download
+ - openssl.exe and run: rand -hex 32
+
+ 
+            version = getattr(_bcrypt, '__version__', '<unknown>')  
+
+
+#moving sensitive info/var e.g passwords, dbservers & name to local machine
+ reading OS usper environment vars: 
+ cd C:\python\fastapi2024\venv\app>
+ py -3 example.py        
+
+pip install alembic
+alembic init alembic
+alembic version -m 'tmp scripts name)
+alembic upgrade head
+alembic downgrade
+
+-calling api from webbrowser go to any browser , righ click select Inspect, thne console tab
+ --type fetch('http://127.0.0.1:8000').then(res => res.json()).then(console.log)
+ **CORS - Cross Origin Resource Sharing 
+
+https://www.google.com/
+
+
+ 
