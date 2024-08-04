@@ -15,8 +15,7 @@ origins = [
     "https://localhost.tiangolo.com",
     "http://localhost",
     "http://localhost:8080",
-    "https://www.google.com/"
-    "*"
+    "https://www.google.com/" 
 ]
 
 app.add_middleware(
@@ -34,7 +33,7 @@ app.include_router(vote.router)
 
 @app.get("/")
 async def root():
-    return {"message": "Sawubona Mhlaba!!!"}
+    return {"message": "Sawubona Mhlaba wethu!!!"}
 
 # from fastapi import Body, FastAPI, Response, status, HTTPException, Depends, APIRouter
 # from fastapi.params import Body
